@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <meta charset = "UTF-8">
+      <title>大屏后台管理系统</title>
+      <link rel="stylesheet" href="./css/bootstrap.min.css">
+      <link rel="stylesheet" href="./css/font-awesome.min.css">
+      <link rel="stylesheet" href="./css/index.css">
+   </head>
+
+   <body>
+      <div id="header">
+         <div id="line"></div>
+         <div id="head" >
+            <div id="logo" class="col-sm-10 col-md-10 col-lg-10">
+               <img src="image/logo.png" alt="">
+            </div>
+            <div id="user" class="col-sm-2 col-md-2 col-lg-2">
+               <div id="innerUr">
+                  <div>
+                     <span class="fa fa-user"></span>
+                     <p id="admin" value="admin">Admin</p>
+                     <button></button>
+                     <div id="window">
+                        <a href="#">退出账号</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="content">
+         <div id="left" >
+            <div id="title"><h2>配置图表</h2></div>
+            <div id="chartCnt"></div>
+         </div>
+         <div id="right">
+            <div id="screen" class="col-sm-12 col-md-12 col-lg-12"></div>
+         </div>
+      </div>
+
+
+
+      <script src = "index.js"></script>
+      <script src="http://cdn.bootcss.com/jquery/2.2.3/jquery.js"></script>
+      <script src="js/dom.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="jquery-ui"></script>
+      <script type="text/javascript" language="javascript">
+         $(function(){
+            $("#left").draggable({
+               helper:"clone",
+               cursor: "move"
+            });
+
+            $("#right").droppable({
+               drop:function(event,ui){
+                  $(this).children().remove();
+                  var source = ui.draggable.clone();
+
+                  $(this).append(source);
+
+               }
+            });
+         })
+      </script>
+   </body>
+
+</html>
