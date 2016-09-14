@@ -5,7 +5,7 @@
       <meta charset = "UTF-8">
       <title>大屏后台管理系统</title>
       <link rel="stylesheet" href="./css/bootstrap.min.css">
-      <link rel="stylesheet" href="./css/font-awesome.min.css">
+      <link rel="stylesheet" href="./font-awesome-4.6.3/css/font-awesome.css">
       <link rel="stylesheet" href="./css/index.css">
    </head>
 
@@ -46,20 +46,23 @@
       <script src="http://cdn.bootcss.com/jquery/2.2.3/jquery.js"></script>
       <script src="js/dom.js"></script>
       <script src="js/bootstrap.min.js"></script>
-      <script src="jquery-ui"></script>
+      <script src="js/jquery-ui"></script>
       <script type="text/javascript" language="javascript">
          $(function(){
-            $("#left").draggable({
+            $(".draggable").draggable({
                helper:"clone",
                cursor: "move"
             });
 
-            $("#right").droppable({
+            $("#screen").find("[id^='part']").droppable({
                drop:function(event,ui){
                   $(this).children().remove();
                   var source = ui.draggable.clone();
-
+                  $(source).find(".heading").css({"width":"100%","height":"16%","background":"#444","color":"#fff","position":"absolute","top":"0"});
+                  $(source).find(".part").css({"width":"100%","height":"84%","position":"absolute","top":"16%"});
+                  $(source).css({"width":"100%","padding":"0","height":"100%","position":"relative"});
                   $(this).append(source);
+
 
                }
             });

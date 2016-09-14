@@ -138,10 +138,11 @@ a, a:hover, a:focus {
 }
 #screen{
     border-radius: 3px;
-
+    width: 100%;
     margin: 0;
     height: 80rem;
     border-radius: 3px;
+    padding: 0;
     background-color: rgb(108, 108, 108);
 
 }
@@ -160,7 +161,39 @@ a, a:hover, a:focus {
 
 /*以下react_css*/
 .icon{
-    width: 30px;
-    height: 30px;
-    background: red;
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 2rem;
+    /*display: inline-block;*/
+    width: 2rem;
+    height: 2rem;
+    background: #666;
+    margin-left: 0.4rem;
+    z-index: 1000;
+    /*letter-spacing: 1rem;*/
+    /*text-indent: 1rem;*/
+    /*vertical-align: middle;*/
+    text-align: center;
+}
+.icon:hover{
+    background: orangered;
+}
+.edit{
+    width: 4.4rem;
+    height: 2rem;
+    /*background: #333;*/
+    display: inline-block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+
+}
+.part{
+    padding: 0;
+    margin: 0;
+    /*display: inline-block;*/
+    border: 1px solid #979797;
+    float: left;
+    overflow: hidden;
+
 }
