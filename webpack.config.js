@@ -3,9 +3,8 @@
 	
    output: {
       path:__dirname +'/',
-      filename: 'index.js',
-
-       publicPath: '/'
+      publicPath: '/',
+      filename: 'index.js'
    },
 	
    devServer: {
@@ -14,17 +13,18 @@
    },
 	
    module: {
-      loaders: [ {
-         test: /\.jsx?$/,
+      loaders:[{
+         test: /\.js[x]?$/,
          exclude: /node_modules/,
-         loader: 'babel',
-			
-         query: {
-            presets: ['es2015', 'react']
-         }
-      }]
-   }
-	
+         loader: 'babel-loader?presets[]=es2015&presets[]=react',
+      }, { 
+         test: /\.css$/, 
+         loader: 'style-loader!css-loader' 
+      }, { 
+         test: /\.(png|jpg)$/, 
+         loader: 'url-loader?limit=512'
+    }]
+  }
 }
 
 module.exports = config;
