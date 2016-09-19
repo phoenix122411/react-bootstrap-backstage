@@ -22,8 +22,8 @@ const DragChartModal = React.createClass({
          <div id="modularImg" className="part" style={{width: '142px', height: '110px', background: '#aaa'}}>
             <img src={this.props.url} style={{ width: '100%', height: '100%'}}/>
              <span className="edit">
-                 <i className="icon fa fa-pencil-square-o" style={{marginLeft:"0"}} onClick={this.open} ></i>
-                 <i className="icon fa fa-trash-o"></i>
+                 <i className="chart_edit icon fa fa-pencil-square-o" style={{marginLeft:"0"}} onClick={this.open} value={this.props.id}></i>
+                 <i className="chart_delete icon fa fa-trash-o" value={this.props.id}></i>
              </span>
          </div>
          <div className="heading">

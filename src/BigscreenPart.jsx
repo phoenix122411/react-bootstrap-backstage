@@ -4,7 +4,7 @@ import React from 'react';
 class BigscreenPart extends React.Component {
    render() {
       return (
-         <div  id={this.props.id} className="part" style={{width:'20%',height:'25%'}}></div>
+         <div id={this.props.id} value={this.props.index} className="part" style={{width:'20%',height:'25%'}}></div>
       );
    }
 };
