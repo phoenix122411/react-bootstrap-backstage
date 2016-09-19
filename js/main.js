@@ -24,7 +24,23 @@ $(function(){
 
             // 克隆到容器中
             var source = ui.draggable.clone();
-            $(source).find(".edit").css("display","none");
+            
+            // 添加移除按钮
+            $('<i class="part-clean fa fa-close"/>').appendTo(source);
+            source.mouseenter(function () {
+                $(this).find("i").show();
+            });
+            source.mouseleave(function () {
+                $(this).find("i").hide();
+            });
+            $(source).find(".part-clean").click(function () {
+                $(source).remove();
+            });
+            
+            // 移除编辑和删除图标
+            $(source).find(".edit").remove();
+            
+            // 样式调整
             $(source).find(".heading").css({"width":"100%","height":"16%","background":"#444","color":"#fff","position":"absolute","top":"0"});
             $(source).find(".part").css({"width":"100%","height":"84%","position":"absolute","top":"16%"});
             $(source).css({"width":"100%","padding":"0","height":"100%","position":"relative"});
