@@ -197,3 +197,12 @@ a, a:hover, a:focus {
     overflow: hidden;
 
 }
+.part-clean{
+    display: none;
+    color: #ff3333;
+    /* background: red; */
+    position: absolute;
+    font-size: 2rem;
+    top: -0.6rem;
+    right: 0.8rem;
+}
