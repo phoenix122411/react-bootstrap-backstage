@@ -14,6 +14,7 @@ class DragChart extends React.Component {
               <div className="heading">
                   <h3 style={{fontSize:"1.4rem",fontWeight:"600",textAlign:"center",lineHeight:"3.2rem"}}>{this.props.title}</h3>
               </div>
+              <input type="hidden" id="chart_id" name="chart_id" value={this.props.id} />
               <input type="hidden" id="chart_path" name="chart_path" value={this.props.path} />
               <input type="hidden" id="target_name" name="target_name" value="" />
           </div>

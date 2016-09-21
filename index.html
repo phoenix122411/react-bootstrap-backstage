@@ -31,6 +31,12 @@
       </div>
       <div id="content">
          <div id="right">
+            <div class="handle">
+               <span>
+                  <i id="save" class="fa fa-folder-open"></i>
+                  <i id="preview" class="fa fa-eye"></i>
+               </span>
+            </div>
             <div id="screen" class="col-sm-12 col-md-12 col-lg-12"></div>
          </div>
          <div id="left" >
@@ -50,6 +56,13 @@
           {id:7, name:"awifi热点类型分布", icon:"http://pic2.97uimg.com/58pic/19/62/67/99I58PICpYn.jpg!w1200"},
           {id:8, name:"AP激活率统计", icon:"http://pic.97uimg.com/back_pic/00/04/20/33/f9fa39c44faaa2e630b7c4486cbc8b66.jpg!w1200"}
       ];
+
+      var relList = [
+        {"chart_icon":"http://localhost:8081/ems-chinanet-bigscreen/awifi/chart_img/全省设备排名.png","chart_id":10,"chart_path":"funnel_SBPM","chart_title":"全省设备排名图","id":84,"screen_id":8,"target":"part_1_1"},
+        {"chart_icon":"http://localhost:8081/ems-chinanet-bigscreen/awifi/chart_img/热点类型分布.png","chart_id":12,"chart_path":"scatter_HotSpot","chart_title":"热点类型分布","id":85,"screen_id":8,"target":"part_2_1"},
+        {"chart_icon":"http://localhost:8081/ems-chinanet-bigscreen/awifi/chart_img/定制终端设备状态统计.png","chart_id":14,"chart_path":"mix_DZZD","chart_title":"定制终端设备状态统计图","id":86,"screen_id":8,"target":"part_3_1"},
+        {"chart_icon":"http://localhost:8081/ems-chinanet-bigscreen/awifi/chart_img/设备类型分布.png","chart_id":15,"chart_path":"pie_LXFB","chart_title":"设备类型分布图","id":87,"screen_id":8,"target":"part_4_1"}
+      ]
    </script>
    <script src="index.js"></script>
    <script src="http://cdn.bootcss.com/jquery/2.2.3/jquery.js"></script>
