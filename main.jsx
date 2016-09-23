@@ -44,8 +44,10 @@ ReactDOM.render(
 
 if(typeof(relList) != 'undefined') {
     for(var i=0; i<relList.length; i++) {
-        ReactDOM.render(<SourceFillBigscreen id={relList[i].chart_id} path={relList[i].chart_path} 
-            url={relList[i].chart_icon} target={relList[i].target} title={relList[i].chart_title} />, 
-                document.getElementById(relList[i].target));
+        if(document.getElementById(relList[i].target) != null) {
+            ReactDOM.render(<SourceFillBigscreen id={relList[i].chart_id} path={relList[i].chart_path} 
+                url={relList[i].chart_icon} target={relList[i].target} title={relList[i].chart_title} />, 
+                    document.getElementById(relList[i].target));
+        }
     };
 }
